@@ -1,0 +1,1 @@
+salarioTotal=(PagoHrsExtra+PagoHrsReg)*1.025;
