@@ -25,10 +25,11 @@ int lecturaArreglo2(int arreglo2[], int numArreglo)
 
 int sumaArreglos(int arreglo1[], int arreglo2[], int numArreglo, int suma[])
 {int x;
- x=sizeof (arreglo1)/sizeof(arreglo1[0]);
- for (int i=0; numArreglo<=x; i++)
+ for (int i=0; i<numArreglo ; i++)
  {suma[i]=arreglo1[i]+arreglo2[i];
- cout<<"Los valores del tercer arreglo son: "<<suma[i]<<endl;}
+ cout<<"--------------------------------------"<<endl;
+ cout<<"Los valores del tercer arreglo son: "<<suma[i]<<endl;
+ cout<<"--------------------------------------"<<endl;}
 }
 
 int main ()
@@ -36,7 +37,11 @@ int main ()
  int numArreglo;
  cout<<"Ingrese el tamaño de los arreglos: "<<endl;
  cin>>numArreglo;
+ int arreglo1m[numArreglo], arreglo2m[numArreglo], arreglo3m[numArreglo];
 
- 
- 
+ lecturaArreglo1 (arreglo1m, numArreglo);
+ lecturaArreglo2 (arreglo2m, numArreglo);
+ sumaArreglos (arreglo1m, arreglo2m, numArreglo, arreglo3m);
+
+  
 }
