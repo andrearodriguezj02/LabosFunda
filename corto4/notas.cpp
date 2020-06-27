@@ -1,28 +1,44 @@
 #include <iostream>
 using namespace std;
 
-int llenadoMatriz (float matriz [n][5], int n)
+void llenadoMatriz (int n, float matriz [][5]);
+void nota(int n, float matriz[][5]);
+
+void llenadoMatriz (int n, float matriz [n][5])
 {
- for (int i=0; i<n; i++)
- {for (int j=0; j<5; j++)
- {cout<<"Ingrese la nota "<<j+1<<" del estudiante "<<i+1<<endl;
- cin>>matriz[i][j];}}
+    for (int i=0; i<n; i++)
+    {
+        for (int j=0; j<5; j++)
+        {
+            cout<<"Ingrese la nota "<<j+1<<" del estudiante "<<i+1<<endl;
+            cin>>matriz[i][j];
+        }
+ 
+    }
 
 
 }
 
-int nota (float matriz[][], int n)
+void nota (int n, float matriz[n][5])
 {
- int m, prom;
+ float prom;
+ float notasAlum[n][5];
+ 
  
  for (int i=0; i<n; i++)
- {for (int j=0; j<5; j++)
- {}}
+  {
+      for (int j=0; j<5; j++)
+        {
+            matriz[i][j]*=0.2;
+            prom+=matriz[i][j];
+            
+        }
+     cout<<"El promedio del estudiante "<<i+1<< " es: "<<prom<<endl;
+     prom=0;
+  }
 
 
 }
-
-
 
 int main ()
 {
@@ -30,7 +46,11 @@ int main ()
  cout<<"Ingrese la cantidad de estudiantes: "<<endl;
  cin>>n;
 
- float matriz[n][5]
+ float matriz[n][5];
 
-    llenadoMatriz(float matriz [n][5], int n);
+    llenadoMatriz (n, matriz);
+    nota (n,matriz);
+
+    return 0; 
+
 }
